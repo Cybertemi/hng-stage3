@@ -1,0 +1,29 @@
+# All thresholds live here — nothing is hardcoded in the code
+
+sliding_window_seconds: 60
+
+baseline_window_minutes: 30
+baseline_recalc_interval: 30
+baseline_min_samples: 5
+
+zscore_threshold: 3.0
+rate_multiplier_threshold: 5.0
+error_rate_multiplier: 3.0
+
+block_alert_timeout_seconds: 10
+
+unban_schedule:
+  - 600     # 1st offence: 10 minutes
+  - 1800    # 2nd offence: 30 minutes
+  - 7200    # 3rd offence: 2 hours
+  # 4th offence onwards: permanent
+
+slack:
+  webhook_url: $SLACK_WEBHOOK
+paths:
+  nginx_log: "/var/log/nginx/hng-access.log"
+  audit_log: "/var/log/detector/audit.log"
+
+dashboard:
+  port: 8888
+  refresh_seconds: 3

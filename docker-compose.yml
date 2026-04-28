@@ -23,6 +23,22 @@ services:
     depends_on:
       - nextcloud
 
+  detector:
+    build:
+      context: ./detector
+      dockerfile: Dockerfile
+    container_name: detector
+    restart: unless-stopped
+    network_mode: host
+    cap_add:
+      - NET_ADMIN
+    volumes:
+      - HNG-nginx-logs:/var/log/nginx:ro
+      - detector-logs:/var/log/detector
+      - ./detector/config.yaml:/app/config.yaml:ro
+    depends_on:
+      - nginx
+
 networks:
   app-network:
     driver: bridge
@@ -31,3 +47,6 @@ volumes:
   nextcloud-data:
   HNG-nginx-logs:
     name: HNG-nginx-logs
+  detector-logs:
+
+
