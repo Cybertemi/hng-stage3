@@ -6,10 +6,14 @@ This is a self-learning intrusion detection system that monitors Nginx access lo
 ## 🔗 Live Links
 
 
+
  **Server IP** : `http://52.55.205.119` 
+
  **Metrics Dashboard** : `http://52.55.205.119:8888` 
- **GitHub Repo** : `https://github.com/Cybertemi/hng-stage3` |
- **Blog Post** : `YOUR_MEDIUM_OR_HASHNODE_BLOG_LINK` |
+
+ **GitHub Repo** : `https://github.com/Cybertemi/hng-stage3` 
+ 
+ **Blog Post** : `https://medium.com/@iloritemitope1999/how-i-built-a-real-time-intrusion-detection-system-from-scratch-c3d17c013fbc` |
 
 > Both the server and dashboard are live during the grading window.
 
